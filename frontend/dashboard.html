@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PhysicsNova — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-left"><button id="brandBtn" class="brand-btn"><svg width="36" height="36"><circle cx="18" cy="18" r="16" fill="none" stroke="#2563eb" stroke-width="2"/></svg></button><span class="brand">PhysicsNova</span></div>
+    <nav class="nav-center"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="problems.html">Problems</a><a class="nav-link" href="dashboard.html">Dashboard</a></nav>
+    <div class="nav-right"><button id="themeToggle" class="icon-btn">🌙</button><button id="signInBtn" class="ghost">Sign In</button><button id="upgradeBtn" class="primary">Upgrade</button></div>
+  </header>
+
+  <main class="container" style="padding-top:20px">
+    <h1>Dashboard</h1>
+    <div class="dash-grid" style="margin-top:12px">
+      <div class="card"><h4>Solved</h4><div id="dashSolved" style="font-size:22px">0</div></div>
+      <div class="card"><h4>Streak (days)</h4><div id="dashStreak" style="font-size:22px">0</div></div>
+      <div class="card"><h4>Leaderboard</h4><ul id="leaderboard"><li>—</li></ul></div>
+    </div>
+
+    <h3 style="margin-top:18px">Activity (last 210 days)</h3>
+    <div id="dashHeatmap" class="heatmap" style="margin-top:12px"></div>
+  </main>
+
+  <footer class="site-footer container"><div class="footer-grid"><div>© <span id="year"></span> PhysicsNova</div></div></footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

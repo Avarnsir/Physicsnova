@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PhysicsNova — Master Physics Through Practice</title>
+  <meta name="description" content="PhysicsNova — daily physics problems, hints, solutions, contests and a motivating contribution heatmap." />
+
+  <!-- Google AdSense - your ID inserted -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446528131473540"
+      crossorigin="anonymous"></script>
+
+  <!-- Razorpay and Stripe -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <script src="https://js.stripe.com/v3/" defer></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAV (same across pages) -->
+  <header class="nav">
+    <div class="nav-left">
+      <button id="brandBtn" class="brand-btn" title="PhysicsNova">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" fill="none" stroke="#2563eb" stroke-width="2" />
+        </svg>
+      </button>
+      <span class="brand">PhysicsNova</span>
+    </div>
+
+    <nav class="nav-center" aria-label="Main">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="problems.html">Problems</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-right">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      <button id="signInBtn" class="ghost">Sign In</button>
+      <button id="upgradeBtn" class="primary">Upgrade</button>
+      <button id="mobileMenuToggle" class="icon-btn mobile-only" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="mobile-menu hidden" aria-hidden="true">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="problems.html" class="mobile-link">Problems</a>
+    <a href="dashboard.html" class="mobile-link">Dashboard</a>
+    <hr>
+    <button id="mobileSign" class="ghost full">Sign In</button>
+    <button id="mobileUpgrade" class="primary full">Upgrade</button>
+  </div>
+
+  <!-- HERO -->
+  <main class="container hero">
+    <div class="hero-left">
+      <div class="badge">⚡ Master Physics Through Practice</div>
+      <h1>Unlock the universe — <span class="gradient">practice physics daily</span></h1>
+      <p class="lead">Topic-based problems (Mechanics, E&M, Quantum, Thermo, Relativity), hints and full solutions to build strong problem solving habits.</p>
+
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="problems.html" class="primary">Start Practicing</a>
+        <a href="problems.html" class="ghost">Browse Problems</a>
+        <button id="ctaUpgrade" class="primary">Go Premium</button>
+      </div>
+
+      <div class="feature-row" style="margin-top:16px">
+        <div class="fchip">📚 Topic-wise</div>
+        <div class="fchip">🏆 Levels</div>
+        <div class="fchip">📈 Heatmap</div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="art-wrap">
+        <svg viewBox="0 0 600 360" class="art-svg" preserveAspectRatio="xMidYMid meet">
+          <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+          <text x="10" y="40" font-size="26" fill="rgba(0,0,0,0.05)">E = mc²</text>
+          <g transform="translate(420,120)" class="orbit-group">
+            <circle cx="0" cy="0" r="48" fill="none" stroke="url(#lg)" stroke-width="2" stroke-dasharray="6 4"></circle>
+            <circle cx="48" cy="0" r="6" fill="#2563eb" class="orbit-dot" />
+          </g>
+        </svg>
+      </div>
+
+      <div style="margin-top:12px">
+        <h4 style="margin:6px 0 8px 0">Activity preview</h4>
+        <div id="homeHeatmap" class="heatmap small"></div>
+        <p class="muted" style="margin-top:8px;font-size:13px">Full contribution graph on Dashboard.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ad slot -->
+  <section class="container">
+    <div class="ad-slot center">
+      <ins class="adsbygoogle" style="display:block;max-width:970px;width:100%;height:90px" data-ad-format="auto" data-full-width-responsive="true" data-ad-client="ca-pub-3446528131473540" data-ad-slot=""></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container features">
+    <div class="feature-grid">
+      <div class="feature card"><div class="feature-icon">🎯</div><h4>Topic-wise Practice</h4><p class="muted">Mechanics, E&M, Quantum, Thermo and more.</p></div>
+      <div class="feature card"><div class="feature-icon">🧠</div><h4>Smart Hints</h4><p class="muted">Contextual nudges without spoiling answers.</p></div>
+      <div class="feature card"><div class="feature-icon">🏁</div><h4>Contests</h4><p class="muted">Weekly challenges and leaderboards.</p></div>
+    </div>
+  </section>
+
+  <footer class="site-footer container">
+    <div class="footer-grid">
+      <div>© <span id="year"></span> PhysicsNova</div>
+      <div class="muted">Privacy • Terms</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

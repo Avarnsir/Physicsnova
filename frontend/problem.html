@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PhysicsNova — Problem</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-left"><button id="brandBtn" class="brand-btn"><svg width="36" height="36"><circle cx="18" cy="18" r="16" fill="none" stroke="#2563eb" stroke-width="2"/></svg></button><span class="brand">PhysicsNova</span></div>
+    <nav class="nav-center"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="problems.html">Problems</a><a class="nav-link" href="dashboard.html">Dashboard</a></nav>
+    <div class="nav-right"><button id="themeToggle" class="icon-btn">🌙</button><button id="signInBtn" class="ghost">Sign In</button><button id="upgradeBtn" class="primary">Upgrade</button></div>
+  </header>
+
+  <main class="container">
+    <div style="margin-top:12px">
+      <button id="pvBack" class="ghost">← Back to Problems</button>
+    </div>
+
+    <div class="pv-grid">
+      <div>
+        <h1 id="pvTitle">Problem Title</h1>
+        <div id="pvMeta" class="muted">Topic · Difficulty · Time</div>
+
+        <div class="pv-tabs" style="margin-top:12px">
+          <button class="tab active" data-tab="problem">Problem</button>
+          <button class="tab" data-tab="hint">Hint</button>
+          <button class="tab" data-tab="solution">Solution</button>
+        </div>
+
+        <div id="pvContent" class="pv-content card" style="margin-top:12px">Problem content loads here</div>
+      </div>
+
+      <aside class="pv-side card">
+        <h3>Submit Answer</h3>
+        <textarea id="pvAnswer" placeholder="Write your solution..." style="margin-top:8px"></textarea>
+        <button id="pvSubmit" class="primary" style="margin-top:10px">Submit Solution</button>
+        <button id="pvShowHint" class="ghost" style="margin-top:8px">Get Hint</button>
+
+        <div id="pvNotice" class="muted" style="margin-top:12px;display:none"></div>
+        <div style="margin-top:12px" id="pvAd">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3446528131473540" data-ad-slot=""></ins>
+          <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer container"><div class="footer-grid"><div>© <span id="year"></span> PhysicsNova</div></div></footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
