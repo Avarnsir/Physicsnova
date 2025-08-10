@@ -1,10 +1,10 @@
 {
-  "name": "physicsnova-payments",
+  "name": "physicsnova",
   "version": "1.0.0",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js",
+    "build": "cd frontend && npm install && npm run build && cd .."
   },
   "dependencies": {
     "better-sqlite3": "^8.0.1",
