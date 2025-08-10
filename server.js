@@ -37,9 +37,8 @@ const razorpay = new Razorpay({ key_id: RAZORPAY_KEY_ID, key_secret: RAZORPAY_KE
 const app = express();
 
 // raw body for stripe webhook
-app.use('/webhook/stripe', bodyParser.raw({ type: 'application/json' }));
-app.use(bodyParser.json());
-app.use(cors({ origin: ALLOWED_ORIGIN }));
+app.use(cors());
+app.use(express.json());
 
 // SQLite setup
 const db = new Database('data.db');
@@ -206,4 +205,4 @@ app.get('/user', (req,res) => {
   res.json({ user, subscriptions: subs });
 });
 
-app.listen(PORT, ()=> console.log(`Payment server listening on ${PORT}`));
+module.exports = app;
